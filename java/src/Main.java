@@ -1,6 +1,7 @@
 import java.util.*;
 import java.io.*;
 
+
 public class Main{
     
     
@@ -15,8 +16,10 @@ public class Main{
         Scanner sc = new Scanner(file);
         Queue<String> q = new LinkedList<String>(); 
         Map<String,Integer>frequency = new HashMap<String,Integer>();
+        StringBuilder sb = new StringBuilder();
         int theFrequency = 0;
         int count = 0;
+        String wordFreq;
         int arg = Integer.parseInt(args[0]);
         //System.out.println(arg);
         while(sc.hasNext() && count < arg)
@@ -32,6 +35,8 @@ public class Main{
         }
         
         
+        
+        
         while(!q.isEmpty())
         {
             
@@ -39,7 +44,11 @@ public class Main{
             frequency.put(freq,frequency.getOrDefault(freq,0)+1);
         }
         
-       System.out.println(frequency);
+        MyComparator comp =new MyComparator(frequency);
+        Map<String,Integer> newMap = new TreeMap(comp);
+        newMap.putAll(frequency);
+        Set<String> keys = newMap.keySet();
+        System.out.println(keys);
        
        
        

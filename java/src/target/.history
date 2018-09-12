@@ -1,3 +1,22 @@
 compile
 run 20 5 5
 exit
+compile
+sbt 5 75
+run 5 75
+run 75 5
+run 75 2
+run 100 1
+run 100 10
+compile
+exit
+compile
+run
+run 2 75
+run 75 2
+run 10 75
+compile
+run 75 5
+run 5 75
+run 75 2
+exit
