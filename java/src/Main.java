@@ -44,12 +44,24 @@ public class Main{
             frequency.put(freq,frequency.getOrDefault(freq,0)+1);
         }
         
-        MyComparator comp =new MyComparator(frequency);
-        Map<String,Integer> newMap = new TreeMap(comp);
-        newMap.putAll(frequency);
-        Set<String> keys = newMap.keySet();
+       /*() MyComparator comp = new MyComparator(frequency);
+        Map<String,Integer> sortedFrequency = new TreeMap(comp);
+        sortedFrequency.putAll(frequency);
+        System.out.println(frequency);
+        Set<String> keys = sortedFrequency.keySet();
+        System.out.println(keys);*/
+        
+        //LinkedHashMap preserve the ordering of elements in which they are inserted
+        LinkedHashMap<String, Integer> reverseSortedMap = new LinkedHashMap<>();
+ 
+        //Use Comparator.reverseOrder() for reverse ordering
+        frequency.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).forEachOrdered(x -> reverseSortedMap.put(x.getKey(), x.getValue()));
+ 
+        Set<String> keys = reverseSortedMap.keySet();
         System.out.println(keys);
-       
+
+       //Compare Value implementation by Lokesh Gupta 
+       //https://howtodoinjava.com/sort/java-sort-map-by-values/
        
        
        
