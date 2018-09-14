@@ -62,3 +62,77 @@ exit
 compile
 run 75 2
 exit
+compile
+run 75 2
+run 75 2 < testing.txt
+compile
+run 1000 2 10
+run 500 2 20
+run 10 6 1000
+run 1000 2 10
+75 2 1000
+run 75 2 1000
+run 2 2 2
+compile
+run 10 6 1000
+compile
+run 10 6 1000
+compile
+10 6 1000
+run 10 6 1000
+compile
+run 10 6 1000
+compile
+run 10 6 1000
+compile
+run 10 6 1000
+run
+compile
+run 10 6 1000
+run 10 6 75
+run 0 6 75
+run 10 0 75
+run 10 6 20
+compile
+run 10 6 1000
+10 6 1000
+run 10 6 1000
+compile
+run 1000 6
+compile
+run 10 6 1000
+compile
+run 10 6 1000
+compile
+run 10 6 1000
+10 6 10
+run 10 6 10
+compile
+run 10 6 1000
+compile
+run
+compile
+run 10 6 1000
+compile
+run 10 6 1000
+compile
+run 2 1000
+run 2 2 1000
+compile
+run 10 6 1000 > testing.txt
+run 6 10 1000
+compile
+run 10 6 1000
+compile
+run 10 6 1000
+compile
+run 10 6 1000
+compile
+run 10 6 1000
+compile
+run 10 6 1000
+compile
+run 10 6 1000
+git commit -m "added seperate queue for frequency
+git add .
+exit
